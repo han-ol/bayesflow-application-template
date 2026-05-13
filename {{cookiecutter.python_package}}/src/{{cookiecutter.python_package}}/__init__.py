@@ -6,9 +6,9 @@ from .model_2 import simulator as simulator_2
 
 simulator = ModelComparisonSimulator(simulators=[simulator_1, simulator_2])
 
-from .adapter_inference import adapter_inference
+from .adapter import adapter
 from .adapter_comparison import adapter_comparison
 {% else -%}
 from .model_1 import simulator
-from .adapter_inference import adapter_inference
+from .adapter import adapter
 {% endif %}

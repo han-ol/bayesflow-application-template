@@ -32,7 +32,7 @@ src/{{cookiecutter.python_package}}/
 ├── model_2/
 │   ├── simulator.py
 │   └── __init__.py
-├── adapter_inference.py   # bf.Adapter for per-model posterior inference
+├── adapter.py         # bf.Adapter for per-model posterior inference
 ├── adapter_comparison.py  # bf.Adapter for ModelComparisonApproximator
 └── __init__.py
 ```
@@ -42,7 +42,7 @@ src/{{cookiecutter.python_package}}/
 ├── model_1/
 │   ├── simulator.py   # prior() + observation_model() -> bf.make_simulator(...)
 │   └── __init__.py
-├── adapter_inference.py   # bf.Adapter for per-model posterior inference
+├── adapter.py   # bf.Adapter for per-model posterior inference
 └── __init__.py
 ```
 {% endif %}
@@ -55,7 +55,7 @@ src/{{cookiecutter.python_package}}/
 
 ```python
 {% if cookiecutter.model_comparison == "yes" -%}
-from {{cookiecutter.python_package}} import simulator, adapter_inference, adapter_comparison
+from {{cookiecutter.python_package}} import simulator, adapter, adapter_comparison
 {% else -%}
-from {{cookiecutter.python_package}} import simulator, adapter_inference
+from {{cookiecutter.python_package}} import simulator, adapter
 {% endif %}```
