@@ -8,7 +8,7 @@ PARAM_NAMES = ["mu", "sigma"]  # just so the adapter knows about them right away
 
 
 def prior():
-    mu = np.random.normal(0.0, 5.0)
+    mu = np.random.normal(0.0, 1.0)
     sigma = np.random.lognormal(0.0, 0.5)
     return dict(mu=mu, sigma=sigma)
 
