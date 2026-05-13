@@ -4,7 +4,7 @@ import bayesflow as bf
 
 N_OBS = 32
 
-PARAM_NAMES = ["mu", "sigma"]
+PARAM_NAMES = ["mu", "sigma"]  # just so the adapter knows about them right away
 
 
 def prior():

@@ -7,7 +7,7 @@
 We use `uv` to manage a reproducible python environment. See the documentation of [uv projects](https://docs.astral.sh/uv/guides/projects/).
 
 ```bash
-uv sync                                  # create .venv and install deps
+uv sync                                  # create .venv, install deps, and install this package in editable mode
 uv run python examples/calibrate.py      # run inside the environment
 ```
 
@@ -23,12 +23,14 @@ uv add pandas                            # will add pandas to pyproject.toml and
 ## Structure
 
 ```
-src/{{cookiecutter.package_name}}/
-├── simulator.py   # prior() + observation_model() -> bf.make_simulator(...)
-├── adapter.py     # bf.Adapter wiring simulator outputs to BayesFlow roles
-└── __init__.py    # re-exports simulator, adapter
+src/{{cookiecutter.python_package}}/
+├── model_1/
+│   ├── simulator.py   # prior() + observation_model() -> bf.make_simulator(...)
+│   └── __init__.py
+├── adapter_inference.py   # bf.Adapter for per-model posterior inference
+└── __init__.py
 ```
 
 ```python
-from {{cookiecutter.package_name}} import simulator, adapter
+from {{cookiecutter.python_package}} import simulator, adapter_inference
 ```

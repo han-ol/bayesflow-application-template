@@ -1,10 +1,11 @@
 import bayesflow as bf
 
-from {{cookiecutter.package_name}} import adapter, simulator
+from {{cookiecutter.python_package}}.model_1 import simulator
+from {{cookiecutter.python_package}} import adapter_inference
 
 workflow = bf.BasicWorkflow(
     simulator=simulator,
-    adapter=adapter,
+    adapter=adapter_inference,
     summary_network=bf.networks.DeepSet(),
 )
 

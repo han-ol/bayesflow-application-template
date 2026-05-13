@@ -1,9 +1,8 @@
 import bayesflow as bf
 
-from .simulator import PARAM_NAMES
+from .model_1 import PARAM_NAMES
 
-
-adapter = (
+adapter_inference = (
     bf.Adapter()
     .convert_dtype("float64", "float32")
     .concatenate(PARAM_NAMES, into="inference_variables")

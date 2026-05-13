@@ -1,5 +1,5 @@
 [project]
-name = "{{cookiecutter.package_name}}"
+name = "{{cookiecutter.python_package}}"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
 readme = "README.md"
@@ -23,11 +23,11 @@ dev = [
 ]
 
 [tool.setuptools]
-package-dir = { "" = "src" }
+package-dir = { "" = "src" }  # keeps the package out of the root so it must be installed before it can be imported
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["{{cookiecutter.package_name}}*"]
+include = ["{{cookiecutter.python_package}}*"]
 exclude = ["artifacts*"]
 
 [tool.ruff]
@@ -59,7 +59,7 @@ ignore_missing_imports = true
 namespace_packages = true
 
 [tool.coverage.run]
-source = ["{{cookiecutter.package_name}}"]
+source = ["{{cookiecutter.python_package}}"]
 branch = true
 parallel = true
 
