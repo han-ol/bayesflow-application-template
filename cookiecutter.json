@@ -4,6 +4,5 @@
   "description": "Amortized Bayesian Inference for <application> using BayesFlow",
   "author_name": "Author Name",
   "python_version": "3.11",
-  "model_comparison": ["no", "yes"],
-  "num_models": 2
+  "model_comparison": ["no", "yes"]
 }

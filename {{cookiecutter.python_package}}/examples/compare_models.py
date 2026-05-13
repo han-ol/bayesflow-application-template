@@ -4,7 +4,7 @@ from bayesflow.approximators import ModelComparisonApproximator
 
 from {{cookiecutter.python_package}} import simulator, adapter_comparison
 
-NUM_MODELS = {{ cookiecutter.num_models }}
+NUM_MODELS = 2
 
 approximator = ModelComparisonApproximator(
     num_models=NUM_MODELS,
